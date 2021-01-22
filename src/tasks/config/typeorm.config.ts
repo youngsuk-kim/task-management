@@ -9,5 +9,5 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   database: 'task',
   entities: ['dist/**/*.entity{.ts,.js}'],
   synchronize: true,
-  logging: true,
+  logging: false,
 };

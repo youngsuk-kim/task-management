@@ -13,8 +13,8 @@ export class TasksService {
     private taskRepository: TaskRepository,
   ) {}
 
-  getTasks(filterDto: GetTasksFilterDto) {
-    //
+  async getTasks(filterDto: GetTasksFilterDto): Promise<Task[]> {
+    return this.taskRepository.getTasks(filterDto);
   }
 
   // 다른 컴포넌트에서 해당 컴포넌트를 사용하게 된다면, tasks 값이 바뀔 수 있다. 그래서 private가 필요하다.
